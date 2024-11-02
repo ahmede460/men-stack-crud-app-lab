@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Quote</title>
+</head>
+<body>
+    <h1>Update Quote</h1>
+    <p><em><%= quote.quote %></em> - <%= quote.author %></p>
+    <form action="/quotes/<%= quote._id %>?_method=PUT" method="POST">
+        <label for="quote">Quote:</label>
+      <input type="text" name="quote" id="quote" />
+
+      <label for="author">Author:</label>
+      <input type="text" name="author" id="author" />
+      <button type="submit">Update Quote</button>
+    </form>
+    <a href="/quotes/">Back to quotes</a>
+    
+</body>
+</html>
